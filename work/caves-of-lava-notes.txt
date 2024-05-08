@@ -1,0 +1,54 @@
+To-Do
+=====
+- sound effects
+- make boss less stupid (move quicker at start and after stun)
+- add torches (decoration)
+- add rock/gem obstacles
+- add background rock layer
+- title screen
+- credits (scrolling?)
+- refine itch.io page
+- submit to jam!
+
+Done
+====
++ lives and respawn
++ add lava death
++ add boss level
++ add boss
+	+ jumping
+	+ throwing fireballs
+	+ moving about the stage
++ add door to boss level
++ add other enemy types
++ activate enemies just as they come on screen
++ add ladders
++ prevent Kip from walking through walls
++ make bgm module
++ boss level: add custom bgm and time
++ add score system, including % for coins/gems
++ add coins
++ add spikes
++ add three boss phases, plus final victory
++ add smashable barrels/crates
+	+ barrel: gem
++ purple gem: extra score
++ rough out itch.io page
++ upload to itch.io
++ bug: face at 0,0
++ add time-over death
++ bug: time shows 0:01 even when time is up
++ design level (with lots of lava!)
+	1. tutorial
+	2. easy stuff (ladders, barrels, simple enemy)
+	3. upper/lower
+	4. hard stuff (tricky jumps, harder enemies)
+	5. kitchen sink (jumps + enemies)
+
+
+Deferred
+========
+- chest
+- other smashables
+- other gems
+- music: add ability to play ot time T (s.play 0, 0, 80; wait T/80; s.adjust 1,0,1)

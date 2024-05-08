@@ -1,0 +1,33 @@
+#!/bin/sh
+
+ech
+echo "Cleaning up..."
+rm -f .DS_Store */.DS_Store */*/.DS_Store
+
+echo
+echo "Preparing HTML5 build"
+rm -rf html-build
+unzip ~/svnrepo/stroutandsons/MiniScript/web/files/minimicro-webgl.zip -d .
+mv MiniMicro html-build
+rm html-build/StreamingAssets/user.minidisk
+zip -r html-build/StreamingAssets/user.minidisk *.ms *.dat bgm pics sounds -x .DS_Store
+rm html-build/StreamingAssets/bootOpts.grfon
+cp bootOpts.grfon html-build/StreamingAssets/
+cd html-build
+rm ../archive.zip
+zip -r ../archive.zip * -x .DS_Store
+cd ..
+./butler push archive.zip joestrout/kip-in-the-caves-of-lava:html5
+./butler push html-build/StreamingAssets/user.minidisk joestrout/kip-in-the-caves-of-lava:minidisk
+
+echo
+echo "Unpacking user.minidisk"
+rm -rf user.minidisk
+unzip html-build/StreamingAssets/user.minidisk -d user.minidisk
+
+# Skipping desktop builds for now.
+# If wanted, go check out the updateitch script in minibasic.
+
+echo "https://joestrout.itch.io/kip-in-the-caves-of-lava"
+open "https://joestrout.itch.io/kip-in-the-caves-of-lava"
+
